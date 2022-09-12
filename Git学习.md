@@ -28,6 +28,10 @@ categories:
 	- git branch -D <分支名> 删掉特定的分支
 	- git merge <分支名> 合并分支
 
+- 远程
+	- 命令git remote add origin git@github.com:Nick-JY/Loongson_FirstLogs.git  
+	- git push origin 本地分支名:远程分支名
+
 
 ![](https://cdn.jsdelivr.net/gh/chengkhen/picture_via_picco/202209112251180.png)
 
@@ -37,3 +41,5 @@ categories:
 
 ![](https://cdn.jsdelivr.net/gh/chengkhen/picture_via_picco/202209121128369.png)
 ![](https://cdn.jsdelivr.net/gh/chengkhen/picture_via_picco/202209121131666.png)
+
+![](https://cdn.jsdelivr.net/gh/chengkhen/picture_via_picco/202209121456714.png)
