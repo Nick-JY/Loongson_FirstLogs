@@ -3,14 +3,14 @@
 - MIPS-32中一共有三种指令格式：R型，I型，J型。
 ###### a.R型(寄存器类型)：
 - R型指令的字段：
-[![xp4lRK.png](https://s1.ax1x.com/2022/09/18/xp4lRK.png)](https://imgse.com/i/xp4lRK)
+![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/R型指令.png)
 - 对于R类型指令，源操作数和目标操作数必须都是寄存器。
 ###### b.I型(立即数类型)：
 - I型指令的字段：
-[![xp5kFI.png](https://s1.ax1x.com/2022/09/18/xp5kFI.png)](https://imgse.com/i/xp5kFI)
+![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/I型指令.png)
 ###### c.J型(跳转类型)：
 - J型指令的字段：
-[![xp53Yq.png](https://s1.ax1x.com/2022/09/18/xp53Yq.png)](https://imgse.com/i/xp53Yq)
+![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/J型指令.png)
 #### 2.运算指令：
 ###### add：
 - ``add $t0 , $t1 , $t2``表示把寄存器t1和t2的值相加之后存入寄存器t0中。

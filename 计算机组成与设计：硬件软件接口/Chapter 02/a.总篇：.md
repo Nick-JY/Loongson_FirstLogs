@@ -1,5 +1,5 @@
 # 思维导图：
-[![xpRBDA.png](https://s1.ax1x.com/2022/09/18/xpRBDA.png)](https://imgse.com/i/xpRBDA)
+![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/计算机语言：指令_思维导图.png)
 ### 一、计算机的语言：指令
 ##### 1.指令：
 - 处理器能够通过高低电平的驱动进行工作，二进制数可以转化成相应的高低电平，因此处理器能够读懂二进制数。
@@ -31,39 +31,39 @@
 ###### 返回地址寄存器：
 - $ra，用来存储某个过程的返回地址。(C语言在调用函数结束后要返回主函数)
 ### 三、内存分区：
-[![vxBwxf.png](https://s1.ax1x.com/2022/09/15/vxBwxf.png)](https://imgse.com/i/vxBwxf)
+![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/内存分区.png)
 - 一般来讲，堆区和栈区是相互生长的，二者共用一个存储区，在此消彼长的过程中达到高效的内存使用。
 - 代码区用来存储程序运行时的代码，也就是指令。
 - 静态存储区一般用来存储程序运行中的静态数据和全局数据。
 - 堆区的内存分配由程序员决定，在程序运行过程中，动态分配的内存就是堆中的内存。
 - 栈区的内存分配由编译器决定，当寄存器数量不够的时候或者遇到数组、结构体等数据，编译器将他们存储到栈区，栈区还可用于换出寄存器的操作。
 ##### 1.栈区、过程帧：
-[![xpfAYV.png](https://s1.ax1x.com/2022/09/18/xpfAYV.png)](https://imgse.com/i/xpfAYV)
+![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/栈的内存.png)
 - 我们现在假设栈为空，$sp 和 $fp指针都指向栈顶，现在我们push4个数据入栈，栈底存的是数据0，由于我们要存4个字节的数据，因此栈指针要给数据预留出四个字节。
 - $sp - 4，这样栈指针就到了新的栈顶的位置，随后把数据存入。
 - 现在我们在内存中创建了一块栈区，帧指针指向栈底，栈指针指向栈顶，这两者之间的这一片栈空间我们叫做：过程帧，或者活动记录。
-##### 2.MIPS-32字的大端寻址：
-- MIPS-32的寻址方式是按照字节进行寻址，也就是每一个字节都唯一对应一个地址。
-- 但是我们有时候一次需要处理一个字(32bit)的数据，因此在MIPS-32中，每一个字也对应一个地址，这个地址是连续4个字节中的大端字节的地址。
-###### a.字节寻址：
-[![vxWGlj.png](https://s1.ax1x.com/2022/09/15/vxWGlj.png)](https://imgse.com/i/vxWGlj)
-###### b.字的大端地址：
-[![vxWTcd.png](https://s1.ax1x.com/2022/09/15/vxWTcd.png)](https://imgse.com/i/vxWTcd)
-- 由于字也相应的拥有地址，因此对于一次处理一个字的指令来讲，只需给出字的地址(字中大端字节的地址，相当于这个字的起始地址)，就能够处理一个字的数据。
+##### 2.大端寻址与小端寻址：
+- 对于32位的机器来讲，每一次从内存中存储或取走的数据大多数都是一个字，那么字的地址是如何定义的呢，并且在这一个字中，四个字节又是怎么排列的呢，大端寻址和小端寻址就是来解决这一问题的。
+- 大端寻址指的是，向内存中存储数据的时候，字中的低字节放在高地址，高字节放在低地址，小端寻址与其相反。
+- 无论是大端寻址还是小端寻址，每一个字的地址与该字中的字节的低地址相同。
+###### a.MIPS-32的大端寻址：
+![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/未命名文件.jpg)
+###### b.其他架构的小端寻址：
+![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/小端寻址.jpg)
 ### 四、MIPS-32指令：
 #### 1.MIPS-32指令格式：
 - MIPS-32中的指令为定长指令，也就是对于任何一种确定指令，其指令的长度都为32位，也就是一个字，处理器一次正好能够处理一个指令。
 - MIPS-32中一共有三种指令格式：R型，I型，J型。
 ###### a.R型(寄存器类型)：
 - R型指令的字段：
-[![xp4lRK.png](https://s1.ax1x.com/2022/09/18/xp4lRK.png)](https://imgse.com/i/xp4lRK)
+![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/R型指令.png)
 - 对于R类型指令，源操作数和目标操作数必须都是寄存器。
 ###### b.I型(立即数类型)：
 - I型指令的字段：
-[![xp5kFI.png](https://s1.ax1x.com/2022/09/18/xp5kFI.png)](https://imgse.com/i/xp5kFI)
+![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/I型指令.png)
 ###### c.J型(跳转类型)：
 - J型指令的字段：
-[![xp53Yq.png](https://s1.ax1x.com/2022/09/18/xp53Yq.png)](https://imgse.com/i/xp53Yq)
+![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/J型指令.png)
 #### 2.运算指令：
 ###### add：
 - ``add $t0 , $t1 , $t2``表示把寄存器t1和t2的值相加之后存入寄存器t0中。
@@ -379,10 +379,10 @@ jr $ra
 ##### 1.寄存器寻址：
 - 寄存器寻址最为简单，所有的R型指令都采用寄存器寻址的方式，CPU通过寄存器的编号来找到相应的寄存器。
 ##### 2.立即数寻址：
-[![xCVQjP.png](https://s1.ax1x.com/2022/09/19/xCVQjP.png)](https://imgse.com/i/xCVQjP)
+![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/立即数寻址.png)
 - 立即数寻址指的就是I型指令中的立即数指令，立即数直接作为指令中的常数，不需要在存储器中进行寻找。
 ##### 3.基地址寻址：
-[![xCVJAg.png](https://s1.ax1x.com/2022/09/19/xCVJAg.png)](https://imgse.com/i/xCVJAg)
+![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/基地址寻址.png)
 - 对于I型指令，在其中一个寄存器中存储内存中的某一个基地址，然后把16位立即数作为在该基地址上的偏移量，从而实现寻址，I指令后面的16位立即数能够覆盖的存储空间为：- $2^{15}$ ~ $2^{15} - 1$ (byte)，大约是64KB。
 - 由于这个寻址空间比较小，因此很多时候我们都把这个立即数符号扩展成32位，再与一个寄存器相加，得到的值作为偏移量。
 	- 为什么要符号扩展？因为这样可以表示：-$2^{31}$ ~ $2^{31} - 1$(byte)，大约是4GB。
@@ -397,7 +397,7 @@ jr $ra
 ``bne $t0 , $t1 , 2500``表示的是跳转到PC+4+4x2500这个地址处。因此指令中的这个偏移量就是以字为单位的。
 - 我们可以认为PC寻址的基础是基地址寻址。
 ##### 5.伪直接寻址：
-[![xCVu9A.png](https://s1.ax1x.com/2022/09/19/xCVu9A.png)](https://imgse.com/i/xCVu9A)
+![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/伪直接寻址.png)
 - J型指令的操作位是6位，地址位是26位，伪直接寻址指的是把J型指令中的26位与PC中的高4位进行拼接操作。
 - 如何拼接？
 	- 我们把J指令中的地址位当成“字”地址，那么一共可以表示$2^{26}$个字的大小空间。

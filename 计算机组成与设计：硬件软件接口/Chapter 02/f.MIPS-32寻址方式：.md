@@ -2,10 +2,10 @@
 ##### 1.寄存器寻址：
 - 寄存器寻址最为简单，所有的R型指令都采用寄存器寻址的方式，CPU通过寄存器的编号来找到相应的寄存器。
 ##### 2.立即数寻址：
-[![xCVQjP.png](https://s1.ax1x.com/2022/09/19/xCVQjP.png)](https://imgse.com/i/xCVQjP)
+![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/立即数寻址.png)
 - 立即数寻址指的就是I型指令中的立即数指令，立即数直接作为指令中的常数，不需要在存储器中进行寻找。
 ##### 3.基地址寻址：
-[![xCVJAg.png](https://s1.ax1x.com/2022/09/19/xCVJAg.png)](https://imgse.com/i/xCVJAg)
+![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/基地址寻址.png)
 - 对于I型指令，在其中一个寄存器中存储内存中的某一个基地址，然后把16位立即数作为在该基地址上的偏移量，从而实现寻址，I指令后面的16位立即数能够覆盖的存储空间为：- $2^{15}$ ~ $2^{15} - 1$ (byte)，大约是64KB。
 - 由于这个寻址空间比较小，因此很多时候我们都把这个立即数符号扩展成32位，再与一个寄存器相加，得到的值作为偏移量。
 	- 为什么要符号扩展？因为这样可以表示：-$2^{31}$ ~ $2^{31} - 1$(byte)，大约是4GB。
@@ -20,7 +20,7 @@
 ``bne $t0 , $t1 , 2500``表示的是跳转到PC+4+4x2500这个地址处。因此指令中的这个偏移量就是以字为单位的。
 - 我们可以认为PC寻址的基础是基地址寻址。
 ##### 5.伪直接寻址：
-[![xCVu9A.png](https://s1.ax1x.com/2022/09/19/xCVu9A.png)](https://imgse.com/i/xCVu9A)
+![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/伪直接寻址.png)
 - J型指令的操作位是6位，地址位是26位，伪直接寻址指的是把J型指令中的26位与PC中的高4位进行拼接操作。
 - 如何拼接？
 	- 我们把J指令中的地址位当成“字”地址，那么一共可以表示$2^{26}$个字的大小空间。
