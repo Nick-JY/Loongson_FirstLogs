@@ -1,8 +1,10 @@
 ## MIPS节选核心指令：
 
-![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/img/MIPSjiexuanzhiling1.PNG)
+![IMG_4650](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/img/IMG_4650.PNG)
 
-![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/img/MIPSjiexuanzhiling2.PNG)
+![](https://nickaljy-pictures.oss-cn-hangzhou.aliyuncs.com/img/IMG_4651.PNG)
+
+
 
 
 
